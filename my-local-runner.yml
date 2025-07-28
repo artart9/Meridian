@@ -1,1 +1,14 @@
+name: Run on My Local Machine
 
+on:
+  push:
+    branches:
+      - main  # or whatever branch you want
+
+jobs:
+  test-local-runner:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run a test script
+        run: echo "Hello from my local machine!"
